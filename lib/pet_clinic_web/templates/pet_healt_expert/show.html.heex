@@ -1,0 +1,38 @@
+<h1>Experto</h1>
+<section class="healtex-card-container">
+<ul class="healtex-card-content">
+<li>
+<img src={Routes.static_path(@conn, "/images/petexpertimage.jpg")} alt="Healt Expert Generic Image"/>
+
+</li>
+  <li>
+    <strong>Name:</strong>
+    <%= @pet_healt_expert.name %>
+  </li>
+
+  <li>
+    <strong>Age:</strong>
+    <%= @pet_healt_expert.age %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @pet_healt_expert.email %>
+  </li>
+
+  <li>
+    <strong>Specialities:</strong>
+    <%= @pet_healt_expert.specialities %>
+  </li>
+
+  <li>
+    <strong>Sex:</strong>
+    <%= @pet_healt_expert.sex %>
+  </li>
+
+</ul>
+</section>
+<div class="spanGeneric">
+  <span><%= link "Edit", to: Routes.pet_healt_expert_path(@conn, :edit, @pet_healt_expert) %></span>
+  <span><%= link "Back", to: Routes.pet_healt_expert_path(@conn, :index) %></span>
+</div>

@@ -1,10 +1,14 @@
-<h1>Show Pet</h1>
+<h1>Mascota</h1>
 
 
 
+<section class="pet-card-container">
 
-<ul>
 
+<ul class="pet-card-content">
+  <li>
+    <img src={Routes.static_path(@conn, "/images/petimagecard.jpeg")} alt="Pet Generic Image"/>
+  </li>
   <li>
     <strong>Name:</strong>
     <%= @pet.name %>
@@ -24,8 +28,9 @@
     <strong>Sex:</strong>
     <%= @pet.sex %>
   </li>
-
 </ul>
-
-<span><%= link "Edit", to: Routes.pet_path(@conn, :edit, @pet) %></span>
-<span><%= link "Back", to: Routes.pet_path(@conn, :index) %></span>
+</section>
+<div class="spanGeneric">
+  <span><%= link "Edit", to: Routes.pet_path(@conn, :edit, @pet) %></span>
+  <span><%= link "Back", to: Routes.pet_path(@conn, :index) %></span>  
+</div>
