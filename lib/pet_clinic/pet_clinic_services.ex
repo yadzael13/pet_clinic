@@ -40,7 +40,7 @@ defmodule PetClinic.PetClinicServices do
   @doc """
   Creates a pet.
 
-  ## Examples
+  ## Examples|
 
       iex> create_pet(%{field: value})
       {:ok, %Pet{}}
@@ -101,4 +101,9 @@ defmodule PetClinic.PetClinicServices do
   def change_pet(%Pet{} = pet, attrs \\ %{}) do
     Pet.changeset(pet, attrs)
   end
+
+
+  def list_pets_by_type(type) do
+   Repo.all(from p in Pet, where: p.type == ^type)
+ end
 end

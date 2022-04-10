@@ -18,6 +18,7 @@ defmodule PetClinicWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+     get "/pets/by_type/:type", PetController, :index_by_type
 
     resources "/pets", PetController
     resources "/petexperts", PetHealtExpertController
